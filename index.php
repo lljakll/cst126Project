@@ -6,7 +6,7 @@
     <title>CST126</title>
 </head>
 <body>
-    <div class="continer">
+    <div class="container">
         <!-- navbar -->
         <?php include('navbar.php') ?>
 

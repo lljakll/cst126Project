@@ -4,6 +4,6 @@
     </div>
     <ul>
         <li><a class="active" href="index.php">Home</a></li>
-        <li><a href="register.php">register</a></li>
+        <li><a href="register.php">Register</a></li>
     </ul>
 </div>

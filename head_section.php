@@ -5,4 +5,4 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- styling -->
-    <link rel="styleheet" href="public_styling.css">
+    <link rel="stylesheet" href="static/css/public_styling.css">
