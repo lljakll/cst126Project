@@ -1,0 +1,17 @@
+.baseForm {
+    margin: auto;
+    width: 25%;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    text-align: center;
+}
+
+textarea {
+    resize: none;
+}
