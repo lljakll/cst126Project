@@ -12,6 +12,6 @@
 
         <!-- page -->
         <div class="content">
-            <a href="register.php" class="btn">Register</a>
+            
         </div>
 <?php include('footer.php') ?>
