@@ -4,7 +4,7 @@
     CST-126 Blog Project 1.0
     Module - Login Page v3.0
     Jackie Adair
-    20 April 2019
+    30 June 19
     PHP for the login page for this blog.
     */
 

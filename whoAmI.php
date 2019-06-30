@@ -2,7 +2,7 @@
     // CST-126 Blog Project 1.0
     // WhoAmI Module version 1.0
     // Jackie Adair
-    // 20 April 2019
+    // 30 June 19
     // Displays current user id
 
     require_once 'myfuncs.php';

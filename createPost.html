@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <!--
     CST-126 Blog Project 1.0
-    Module - Login v1.0
+    Module - Create Post v1.0
     Jackie Adair
-    20 April 2019
-    HTML for the Login page.
+    30 June 19
+    HTML for the Create a Blog Post page.
 -->
 <html>
     <head>
-        <title>Login Form</title>
+        <title>Create a Blog Post</title>
         <link rel="stylesheet" type="text/css" href="style/site.css">
     </head>
     <body>
-        <h1>Login</h1>
         <div class="baseForm">
-            <form action="loginHandler.php" method="POST">
+            <form action="createPost.php" method="POST">
                 <table>
                     <tr>
-                        <td>Username:</td>
-                        <td><input type="text" name="userName" /></td>
+                        <td><textarea name="postSubject" rows="1" cols="50" placeholder="Subject"></textarea></td>
                     </tr>
                     <tr>
-                        <td>Password:</td>
-                        <td><input type="password" name="userPass" /></td>
+                        <td><textarea name="postBody" rows="10" cols="50" placeholder="Post Content"></textarea></td>
                     </tr>
                     <tr>
                         <td colspan="2" align="center"><input type="submit" value="Submit" /></td>
                     </tr>
                     <tr>
-                            <td colspan="2" align="center"><a href="index.html">Main Menu</a></td>
+                        <td colspan="2" align="center"><a href="index.html">Main Menu</a></td>
                     </tr>
                 </table>
             </form>

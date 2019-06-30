@@ -3,7 +3,7 @@
     // CST-126 Blog Project 1.0
     // List users Module version 1.0
     // Jackie Adair
-    // 20 April 2019
+    // 30 June 19
     // List all users in database.
 
     require_once('myfuncs.php');

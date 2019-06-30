@@ -12,9 +12,6 @@
 
         <!-- page -->
         <div class="content">
-            <h2 class="content-title">Latest</h2>
-            <hr>
-            <hr>
             
         </div>
 <?php include('footer.php') ?>
