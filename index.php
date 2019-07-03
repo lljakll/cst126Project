@@ -1,17 +1,17 @@
 <?php require_once('config.php') ?>
-<?php require_once('functions.php') ?>
-<?php require_once('registerLogin.php') ?>
+<?php require_once( ROOT_PATH . '/includes/public_functions.php') ?>
+<?php require_once( ROOT_PATH . '/includes/registerLogin.php') ?>
 
-<?php require_once('head_section.php') ?>
+<?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
     <title>CST126</title>
 </head>
 <body>
     <div class="container">
         <!-- navbar -->
-        <?php include('navbar.php') ?>
+        <?php include( ROOT_PATH . '/includes/navbar.php') ?>
 
         <!-- page -->
         <div class="content">
             
         </div>
-<?php include('footer.php') ?>
+<?php include( ROOT_PATH . '/includes/footer.php') ?>
