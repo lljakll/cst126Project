@@ -17,7 +17,7 @@
                 <?php include ( ROOT_PATH . '/includes/errors.php') ?>
                 <input type="text" name="username" value="<?php echo $username; ?>" value="" placeholder="Username">
                 <input type="password" name="password" placeholder="Password">
-                <button type="submit" class="btn" name="login_btn">Login</button>
+                <button type="submit" class="btn" name="btnLogin">Login</button>
                 <p>
                 <a href="register.php">register</a>
             </form>
