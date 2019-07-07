@@ -5,10 +5,14 @@
     <ul>
         <li><a href="index.php">Home</a></li>
 
-        <li><a href="login.php">Login</a></li>
-
-        <li><a href="register.php">Register</a></li>
-
-        <li><a href="new_post.php">Create a Post</a></li>
+        <?php 
+            if (isset($_SESSION['user'])){
+                echo "<li><a href=\"logout.php\">Logout</a></li>";
+                echo "<li><a href=\"new_post.php\">Create a Post</a></li>";
+            }else{
+                echo "<li><a href=\"login.php\">Login</a></li>";
+                echo "<li><a href=\"register.php\">Register</a></li>";
+            }
+        ?>
     </ul>
 </div>

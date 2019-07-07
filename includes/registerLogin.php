@@ -41,8 +41,8 @@
             // encrypt password
             $password = md5($password1);
             // build query
-            $query = "INSERT INTO users(username, firstname, lastname, email, password, created, modified) 
-                VALUES('$username', '$firstname', '$lastname', '$email', '$password', now(), now())";
+            $query = "INSERT INTO users(username, firstname, lastname, email, password, role, created, modified) 
+                VALUES('$username', '$firstname', '$lastname', '$email', '$password', 6, now(), now())";
             // write to users unless error
             if (!mysqli_query($conn, $query)) {
                 echo ("Error: " . mysqli_error($conn));
@@ -53,7 +53,7 @@
             $_SESSION['user'] = getUserById($reg_user_id);
 
             // check session array for user and redirect
-            if ( in_array($_SESSION['user'])){
+            if (($_SESSION['user'])){
                 $_SESSION['message'] = "You are now logged in";
                 header('location: index.php');
                 exit(0);
@@ -63,9 +63,53 @@
 
     // LOGIN USER
     if (isset($_POST['btnLogin'])){
+            $username = $_POST['username'];
+            $password = $_POST['password'];
 
+            // validate form input exists maybe some javascript in the future
+            if(empty($username)) {array_push($errors, "Username is a required entry");}
+            if(empty($password)) {array_push($errors, "A password is required");}
+
+            // if no errors, check to see if user exists
+            if (empty($errors)){
+                $password = md5($password);
+                $sql = "SELECT * FROM users WHERE username='$username' and password='$password' LIMIT 1";
+
+                $result = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($result) > 0) {
+
+                    $reg_user_id = mysqli_fetch_assoc($result)['id'];
+
+                    $_SESSION['user'] = getUserByID($reg_user_id);
+
+                    // Check user roles and redirect
+                    // TODO: setup a switch case for user login permissions
+                    if (in_array($_SESSION['user']['role'], ["1"])){
+                        $_SESSION['message'] = "You are now logged in as an administrator";
+
+                        header('location: ' . BASE_URL . 'admin/dashboard.php');
+                        exit(0);
+                    } else {
+
+                        $_SESSION['message'] = "you are now logged in.";
+
+                        header('location: index.php');
+                        exit(0);
+                    }
+                } else {
+                    array_push($errors, 'Bad username or password');
+                }
+            }
+        }
+
+    function getUserById($id){
+        global $conn;
+        $sql = "SELECT * FROM users WHERE id=$id LIMIT 1";
+
+        $result = mysqli_query($conn, $sql);
+        $user = mysqli_fetch_assoc($result);
+
+        // Array = id, username, firstname, lastname, email, password, role, created, modified
+        return $user;
     }
-
-
-
 ?>
