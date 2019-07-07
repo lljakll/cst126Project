@@ -1,7 +1,9 @@
-        <div class="footer">
-            <p>Trilixium &copy; <?php echo date('Y'); ?></p>
-        </div>
+		<div class="footer">
+			<p>MyViewers &copy; <?php echo date('Y'); ?></p>
+		</div>
+		<!-- // footer -->
 
-    </div>
+	</div>
+	<!-- // container -->
 </body>
 </html>
